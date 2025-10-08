@@ -298,6 +298,11 @@ Após o build:
      npm install
      npm run dev
      ```
+3. Acesse:  
+   - Frontend → [http://localhost:5173](http://localhost:5173)  
+   - API → [http://localhost:3000](http://localhost:3000)
+
+---
      
 ## 🪶 Testes do sistema como ADM
 
@@ -314,12 +319,7 @@ Após o build:
 3. Pronto agora é só testar.
 
 ---
-     
-3. Acesse:  
-   - Frontend → [http://localhost:5173](http://localhost:5173)  
-   - API → [http://localhost:3000](http://localhost:3000)
-
----
+    
 ## 🧩 Dificuldades Encontradas
 
 Durante o desenvolvimento do projeto **Blog Aulas**, algumas dificuldades foram encontradas nas etapas de integração e execução:
