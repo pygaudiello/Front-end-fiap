@@ -70,7 +70,7 @@ blog_aulas/
 - **TypeScript**  
 - **Axios** 
 - **React Router DOM** 
-- **CSS Modules / TailwindCSS**
+- **CSS Modules
 
 ### ⚙️ Backend
 - **Node.js**  
