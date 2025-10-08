@@ -349,8 +349,8 @@ Esses aprendizados reforçam as boas práticas de desenvolvimento full-stack e a
 ## 📚 Vídeo do Projeto
 
 Link do Vídeo: 
-
----
+- Google Drive: [Clique aqui](https://drive.google.com/drive/folders/1VlSmutBPg8NNvxvmzlxdPnzYOmFdDhGN?usp=sharing)
+- Youtube: [Clique aqui](https://youtu.be/iZ_Sku2wnTk)
 
 ---
 ## 📜 Licença e Créditos
