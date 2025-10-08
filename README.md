@@ -289,11 +289,13 @@ Após o build:
    - **Terminal 1:**  
      ```bash
      cd blog_backend
-     npm start
+     npm install
+     npm run dev
      ```
    - **Terminal 2:**  
      ```bash
      cd blog_frontend
+     npm install
      npm run dev
      ```
 3. Acesse:  
