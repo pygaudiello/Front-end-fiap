@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import api from "../api/api";
+import api from "../../api/api";
+import styles from "./EditPost.module.css";
 
 export default function EditPost() {
   const { id } = useParams(); // pega o id da aula pela URL
@@ -51,7 +52,7 @@ export default function EditPost() {
     }
 
     return (
-        <form onSubmit={handleUpdate}>
+        <form onSubmit={handleUpdate} className={styles.form}>
         <h2>Editar Aula</h2>
         <input
             value={form.title}
@@ -70,7 +71,7 @@ export default function EditPost() {
         />
 
         <button type="submit">Salvar alterações</button>
-        <button type="button" onClick={handleDelete} style={{ marginLeft: "10px", color: "red" }}>
+        <button type="button" onClick={handleDelete} style={{ color: "red" }}>
             Deletar aula
         </button>
         </form>

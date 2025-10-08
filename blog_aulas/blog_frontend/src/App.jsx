@@ -4,13 +4,13 @@ import "./App.css";
 // App.jsx
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Admin from "./pages/Admin";
+import Admin from "./pages/Admin/Admin";
 import CreatePost from "./pages/Postagem/CreatePost";
-import EditPost from "./pages/EditPost";
+import EditPost from "./pages/EditPost/EditPost";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
-import PostView from "./pages/PostView";
-import Gerenciar from "./pages/Gerenciar";
+import PostView from "./pages/PostView/PostView";
+import Gerenciar from "./pages/Gerenciar/Gerenciar";
 
 function App() {
   return (

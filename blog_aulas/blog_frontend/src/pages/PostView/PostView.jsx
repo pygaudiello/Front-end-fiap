@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import api from '../api/api';
+import api from '../../api/api';
+import './PostView.module.css';
 
 export default function PostView() {
   const { id } = useParams();
@@ -40,11 +41,11 @@ export default function PostView() {
     try {
       const response = await api.post(`/posts/${id}/comments`, commentForm);
       console.log('✅ Comentário adicionado:', response.data);
-      
+
       // Recarrega o post para mostrar o novo comentário
       const updatedPost = await api.get(`/posts/${id}`);
       setPost(updatedPost.data);
-      
+
       setCommentForm({ author: '', content: '' });
       alert('Comentário adicionado!');
     } catch (error) {
@@ -67,7 +68,7 @@ export default function PostView() {
   if (post === null && !error) {
     return <div style={{ textAlign: 'center', padding: '40px' }}>Carregando...</div>;
   }
-  
+
   if (error) {
     return (
       <div style={{ textAlign: 'center', padding: '40px' }}>
@@ -81,24 +82,23 @@ export default function PostView() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
       {/* POST */}
-      <article style={{ marginBottom: '40px', padding: '20px', border: '1px solid #e0e0e0', borderRadius: '8px' }}>
-        <h1 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>{post.title}</h1>
-        <p style={{ color: '#666', marginBottom: '20px' }}>
+      <article className="post-article">
+        <h1>{post.title}</h1>
+        <p className="post-meta">
           Por: {post.author} • {new Date(post.createdAt).toLocaleDateString('pt-BR')}
         </p>
-        <div 
-          style={{ fontSize: '1.1rem', lineHeight: '1.6' }}
-          dangerouslySetInnerHTML={{ __html: post.content }} 
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </article>
 
       {/* COMENTÁRIOS */}
-      <section style={{ marginBottom: '40px' }}>
-        <h2>💬 Comentários ({post.Comments ? post.Comments.length : 0})</h2>
-        
-        {post.Comments && post.Comments.length > 0 ? (
+      <section className="comments-section">
+        <h2>💬 Comentários ({post.Comments?.length || 0})</h2>
+        {post.Comments?.length ? (
           post.Comments.map(comment => (
-            <div key={comment.id} style={{ border: '1px solid #ddd', padding: '15px', margin: '10px 0', borderRadius: '8px' }}>
+            <div key={comment.id} className="comment-card">
               <strong>{comment.author}</strong>
               <p>{comment.content}</p>
               <small>{new Date(comment.createdAt).toLocaleDateString('pt-BR')}</small>
@@ -110,7 +110,7 @@ export default function PostView() {
       </section>
 
       {/* FORMULÁRIO COMENTÁRIO */}
-      <section style={{ border: '1px solid #ddd', padding: '20px', borderRadius: '8px' }}>
+      <section className="comment-form">
         <h3>✍️ Adicionar Comentário</h3>
         <form onSubmit={handleAddComment}>
           <input

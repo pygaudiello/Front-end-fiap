@@ -24,6 +24,7 @@ const jwt = require('jsonwebtoken');
         next();
     } else {
         res.status(403).json({ error: 'Acesso negado. Apenas professores.' });
+        res.render('/login');
     }
     };
 
