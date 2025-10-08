@@ -308,11 +308,11 @@ Após o build:
 
 1. Acessando o sistema vá até a página "ADMIN"
 2. Dentro da página coloque as seguintes informações:
-   - **Input 1:**  
+   - **Usuário:**  
      ```bash
      prof1
      ```
-   - **Input 2:**  
+   - **Senha:**  
      ```bash
      senha123
      ```
