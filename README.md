@@ -298,6 +298,23 @@ Após o build:
      npm install
      npm run dev
      ```
+     
+## 🪶 Testes do sistema como ADM
+
+1. Acessando o sistema vá até a página "ADMIN"
+2. Dentro da página coloque as seguintes informações:
+   - **Input 1:**  
+     ```bash
+     prof1
+     ```
+   - **Input 2:**  
+     ```bash
+     senha123
+     ```
+3. Pronto agora é só testar.
+
+---
+     
 3. Acesse:  
    - Frontend → [http://localhost:5173](http://localhost:5173)  
    - API → [http://localhost:3000](http://localhost:3000)
