@@ -346,6 +346,12 @@ O desenvolvimento deste projeto proporcionou diversos aprendizados práticos:
 
 Esses aprendizados reforçam as boas práticas de desenvolvimento full-stack e a importância da documentação clara e detalhada para fins acadêmicos e profissionais.
 
+## 📚 Vídeo do Projeto
+
+Link do Vídeo: 
+
+---
+
 ---
 ## 📜 Licença e Créditos
 
